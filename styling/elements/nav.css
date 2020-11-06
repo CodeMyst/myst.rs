@@ -19,10 +19,25 @@ nav {
     width: 30%;
 }
 
+.donate {
+    color: #424242 !important;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ff8181;
+}
+
+.donate:hover {
+    background-color: #ff6f6f;
+}
+
 .nav-links a {
     color: aliceblue;
     font-size: 20px;
     letter-spacing: 3px;
+}
+
+.nav-links a:hover {
+    color: #4EC9B2;
 }
 
 .burger {

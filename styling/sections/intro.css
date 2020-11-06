@@ -38,7 +38,6 @@
 .intro-buttons {
     width: 60%;
     display: flex;
-    justify-content: space-between;
     padding-top: 20px;
 }
 
@@ -53,4 +52,15 @@
 
 .intro-projects:hover {
     background-color: #4EC9B2;
+}
+
+.proj-parent {
+    padding-right: 50px;
+}
+
+@media only screen and (max-width: 750px) {
+    .intro {
+        padding-top: 30px;
+        width: 80%;
+    }
 }

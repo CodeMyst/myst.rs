@@ -15,13 +15,23 @@
     padding: 10px 0;
 }
 
+.socials:hover {
+    color: #4b4b4b;
+}
+
 .social-line-parent {
     display: flex;
     height: 30;
 }
 
 .social-line {
-    width: 5%;
+    width: 5px;
     height: 20%;
     background: #808080;
+}
+
+@media only screen and (max-width: 750px) {
+    .side-socials {
+        padding-left: 10px;
+    }
 }
