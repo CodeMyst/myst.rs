@@ -1,0 +1,66 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    padding-left: 10%;
+    width: 50%;
+}
+
+.intro-hi {
+    font-size: 24px;
+    color: #4EC9B2;
+}
+
+.intro-name {
+    font-size: 72px;
+    color: #FF9900;
+}
+
+.intro-miniDescription {
+    font-size: 54px;
+    color: #ffffff1f;
+}
+
+.intro-longDescription {
+    font-size: 16px;
+    color: #ffffff1f;
+}
+
+.intro-name {
+    letter-spacing: 3px;
+}
+
+.intro-pad {
+    padding: 10px;
+}
+
+.intro-buttons {
+    width: 60%;
+    display: flex;
+    padding-top: 20px;
+}
+
+.intro-projects {
+    border-radius: 5px;
+    border: none;
+    background-color: #FFB84E;
+    padding: 10px;
+    font-size: 18px;
+    width: 150px;
+}
+
+.intro-projects:hover {
+    background-color: #4EC9B2;
+}
+
+.proj-parent {
+    padding-right: 50px;
+}
+
+@media only screen and (max-width: 750px) {
+    .intro {
+        padding-top: 30px;
+        width: 80%;
+    }
+}

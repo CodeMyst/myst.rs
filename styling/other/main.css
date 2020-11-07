@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 0;
+    outline: none;
+    text-transform: lowercase;
+}
+
+*:focus {
+    border: none;
+}
+
+body {
+    background: #272727;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
