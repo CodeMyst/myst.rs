@@ -5,6 +5,7 @@
     margin: 0;
     outline: none;
     text-transform: lowercase;
+    scroll-behavior: smooth;
 }
 
 *:focus {

@@ -10,21 +10,25 @@
 .intro-hi {
     font-size: 24px;
     color: #4EC9B2;
+    animation: 1s fadein linear;
 }
 
 .intro-name {
     font-size: 72px;
     color: #FF9900;
+    animation: 1.5s fadein linear;
 }
 
 .intro-miniDescription {
     font-size: 54px;
     color: #ffffff1f;
+    animation: 2s fadein linear;
 }
 
 .intro-longDescription {
     font-size: 16px;
     color: #ffffff1f;
+    animation: 2.5s fadein linear;
 }
 
 .intro-name {
@@ -47,6 +51,7 @@
     background-color: #FFB84E;
     padding: 10px;
     font-size: 18px;
+    animation: 0.5s pop linear;
     width: 150px;
 }
 
@@ -62,5 +67,21 @@
     .intro {
         padding-top: 30px;
         width: 80%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    from { 
+        transform: scale(0, 0);
+    } to {
+        transform: scale(1, 1);
     }
 }
