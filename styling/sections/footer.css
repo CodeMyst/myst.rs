@@ -1,0 +1,20 @@
+footer {
+   padding-top: 150px;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.footer-text {
+   font-size: 16px;
+   color: var(--mystrey);
+   padding: 10px 0;
+}
+
+.footer-link {
+   color: var(--mystlue);
+}
+
+.footer-link:hover {
+   color: #ffffff;
+}
