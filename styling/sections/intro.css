@@ -9,25 +9,25 @@
 
 .intro-hi {
     font-size: 24px;
-    color: #4EC9B2;
+    color: var(--mystlue);
     animation: 1s fadein linear;
 }
 
 .intro-name {
     font-size: 72px;
-    color: #FF9900;
+    color: var(--mystage);
     animation: 1.5s fadein linear;
 }
 
 .intro-miniDescription {
     font-size: 54px;
-    color: #ffffff1f;
+    color: var(--mystrey);
     animation: 2s fadein linear;
 }
 
 .intro-longDescription {
     font-size: 16px;
-    color: #ffffff1f;
+    color: var(--mystreydark);
     animation: 2.5s fadein linear;
 }
 
