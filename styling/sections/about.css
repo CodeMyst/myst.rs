@@ -9,19 +9,19 @@
 
 .about-header {
    font-size: 48px;
-   color: #4EC9B2;
+   color: var(--mystlue);
    padding-bottom: 10px;
 }
 
 .about-top {
    font-size: 18px;
-   color: #ffffff8e;
+   color: var(--mystrey);
    padding: 10px 0;
 }
 
 .about-bottom {
    font-size: 18px;
-   color: #ffffff8e;
+   color: var(--mystrey);
    padding: 10px 0;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .fa-arrow-circle-right, .skill {
-   color: #4EC9B2;
+   color: var(--mystlue);
    font-size: 20px;
 }
 
