@@ -1,11 +1,17 @@
 .contact {
    display: flex;
-   flex-direction: row;
    justify-content: center;
    padding-left: 10%;
    align-items: center;
    justify-content: center;
    overflow: hidden;
+}
+
+.contact-header {
+   font-size: 36px;
+   padding: 70px 0;
+   text-align: center;
+   color: var(--mystlue);
 }
 
 .thanks {
