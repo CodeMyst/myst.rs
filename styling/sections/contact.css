@@ -114,3 +114,14 @@
       display: none;
    }
 }
+
+@media only screen and (max-width: 600px) {
+   .email-form {
+      padding: 30px;
+      width: 400px;
+      height: 250px;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column !important;
+   }
+}
