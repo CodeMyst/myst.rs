@@ -1,0 +1,127 @@
+.contact {
+   display: flex;
+   justify-content: center;
+   padding-left: 10%;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.contact-header {
+   font-size: 36px;
+   padding: 70px 0;
+   text-align: center;
+   color: var(--mystlue);
+}
+
+.thanks {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: var(--mystlue);
+   color: var(--mystrey);
+   width: 300px;
+   padding: 30px;
+   height: 150px;
+   border-top-left-radius: 7px;
+   border-bottom-left-radius: 7px;
+}
+
+.fa-handshake {
+   font-size: 96px;
+}
+
+.thanks-head {
+   font-size: 40px;
+}
+
+.questions {
+   font-size: 20px;
+}
+
+.email-form {
+   background: #29aa92;
+   padding: 30px;
+   width: 500px;
+   height: 250px;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: column !important;
+}
+
+.top {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.input-mail, .input-name {
+   color: white;
+   text-transform: none !important;
+   border-radius: 3px;
+   outline: none;
+   height: 40px;
+   width: 200px;
+   border: none;
+   padding: 5px;
+   font-size: 18px;
+   margin: 10px;
+   background: var(--mystlue);
+}
+
+.input-message {
+   color: white;
+   text-transform: none !important;
+   margin-top: 10px;
+   border-radius: 7px;
+   width: 100%;
+   outline: none;
+   height: 300px;
+   border: none;
+   font-size: 18px;
+   padding: 5px;
+   resize: none;
+   background: var(--mystlue);
+}
+
+.submit-req {
+   outline: none;
+   padding: 10px;
+   border: none;
+   background: var(--mystlue);
+   margin-top: 20px;
+   width: 100px;
+   border-radius: 7px;
+   color: white;
+   font-size: 18px;
+}
+
+.submit-req:hover {
+   background: var(--mystrey);
+}
+
+.fa-paper-plane {
+   padding-right: 3px;
+}
+
+::placeholder {
+   color: #dfdfdf;
+}
+
+@media only screen and (max-width: 1000px) {
+   .thanks {
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .email-form {
+      padding: 30px;
+      width: 400px;
+      height: 250px;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column !important;
+   }
+}

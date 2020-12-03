@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
+:root {
+    --mystlue: #4EC9B2;
+    --mystage: #FF9900;
+    --mystrey: #ffffff8e;
+    --mystreydark: #ffffff5e;
+    --mystreen: #3aff75;
+}
+
 * {
     font-family: 'Ubuntu Mono', monospace;
     margin: 0;
     outline: none;
     text-transform: lowercase;
+    scroll-behavior: smooth;
 }
 
 *:focus {

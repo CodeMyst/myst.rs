@@ -1,0 +1,55 @@
+.about {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 80vh;
+   padding-left: 10%;
+   width: 50%;
+}
+
+.about-header {
+   font-size: 48px;
+   color: var(--mystlue);
+   padding-bottom: 10px;
+}
+
+.about-top {
+   font-size: 18px;
+   color: var(--mystrey);
+   padding: 10px 0;
+}
+
+.about-bottom {
+   font-size: 18px;
+   color: var(--mystrey);
+   padding: 10px 0;
+}
+
+.skills {
+   padding-top: 30px;
+   display: flex;
+   flex-direction: column;
+}
+
+.lang-skill {
+   display: flex;
+   padding: 10px 0;
+   width: 300px;
+}
+
+.skill-pad {
+   padding-left: 5px;
+}
+
+.fa-arrow-circle-right, .skill {
+   color: var(--mystlue);
+   font-size: 20px;
+}
+
+.row {
+   padding-left: 20px;
+}
+
+.row-2 {
+   padding-left: 40px;
+}

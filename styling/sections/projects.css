@@ -1,0 +1,118 @@
+.projects {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.projects-header {
+   text-align: center;
+   color: var(--mystlue);
+   font-size: 48px;
+   padding-bottom: 30px;
+}
+
+.cards {
+   padding: 30px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.project-card {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 500px;
+   height: 350px;
+   text-align: center;
+   border-radius: 5px;
+   box-shadow: 5px 5px 40px #00000054;
+   margin: 30px 0;
+}
+
+.feature {
+   color: var(--mystage);
+}
+
+.tech {
+   display: flex;
+   flex-direction: row;
+}
+
+.project-title {
+   padding: 10px 0;
+   font-size: 40px;
+   color: var(--mystrey);
+}
+
+.tech-card {
+   margin: 0 5px;
+   border-radius: 7px;
+   padding: 5px;
+   width: fit-content;
+}
+
+.frontend {
+   background: #70a2ff;
+}
+
+.d {
+   background: #ff7070;
+}
+
+.mongo {
+   background: #70ff7c;
+}
+
+.project-description {
+   color: var(--mystrey);
+   padding-top: 20px;
+}
+
+.checklist {
+   display: flex;
+   padding-top: 20px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.check {
+   display: flex;
+   width: 200px;
+   padding: 7px 0;
+}
+
+.task {
+   color: var(--mystreen);
+   padding-left: 20px;
+}
+
+.fa-check-circle {
+   color: var(--mystreen);
+}
+
+.project-btns {
+   display: flex;
+   flex-direction: row;
+   padding-top: 30px;
+}
+
+.project-link {
+   margin: 0 10px;
+   background: var(--mystage);
+   color: white;
+   padding: 7px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 24px;
+   border-radius: 50px;
+}
+
+.project-link:hover {
+   background: var(--mystlue);
+}

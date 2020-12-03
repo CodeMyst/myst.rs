@@ -6,6 +6,7 @@
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
+    animation: 1s linear fadein;
 }
 
 .socials {
@@ -33,5 +34,15 @@
 @media only screen and (max-width: 750px) {
     .side-socials {
         padding-left: 10px;
+    }
+}
+
+@keyframes fadein {
+    from {
+        transform: scale(0, 0);
+        opacity: 0;
+    } to {
+        transform: scale(1, 1);
+        opacity: 1;
     }
 }
