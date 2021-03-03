@@ -1,0 +1,7 @@
+extends base-blog
+
+block body-blog
+    - foreach (post; posts)
+        .post
+            a(href="/blog/"~post.link)= post.title
+            p.date= post.date

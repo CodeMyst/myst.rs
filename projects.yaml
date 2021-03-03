@@ -1,0 +1,147 @@
+%YAML 1.1
+---
+projects:
+- name: pastemyst
+  link: /pastemyst
+  lang: D
+  lang-bg: B03931
+  lang-fg: ffffff
+  status: active
+  time: 2018 - present
+  website: https://paste.myst.rs
+  source: https://github.com/codemyst/pastemyst
+  type: web
+  stars: 37
+  description: !!str >
+    a powerful website for storing and sharing text and code snippets. completely
+    free and open source.
+- name: pastry
+  link: /pastry
+  lang: D
+  lang-bg: B03931
+  lang-fg: ffffff
+  status: active
+  time: 2021 - present
+  website: https://pastry.myst.rs
+  source: https://github.com/codemyst/pastry
+  type: tools
+  stars: 5
+  description: !!str >
+    a command line tool for pasting files to pastemyst
+- name: pastemyst-d
+  link: /pastemyst-d
+  lang: D
+  lang-bg: B03931
+  lang-fg: ffffff
+  status: active
+  time: 2021 - present
+  website: https://paste.myst.rs/api
+  source: https://github.com/codemyst/pastemyst-d
+  type: web
+  stars: 4
+  description: !!str >
+    pastemyst api wrapper written in D
+- name: IssueMyst
+  link: /issuemyst
+  lang: Rust
+  lang-bg: dea584
+  lang-fg: 141414
+  status: inactive
+  time: 2020
+  website: https://issue.myst.rs
+  source: https://github.com/codemyst/issuemyst
+  type: web
+  stars: 2
+  description: !!str >
+    small website that fetches a random issue from a github repo
+- name: zigmath
+  link: /zigmath
+  lang: Zig
+  lang-bg: ec915c
+  lang-fg: 141414
+  status: active
+  time: 2020 - present
+  website: https://github.com/codemyst/zigmath
+  source: https://github.com/codemyst/zigmath
+  type: games
+  stars: 0
+  description: !!str >
+    naive math lib intended for games written in zig
+- name: BuildMyst
+  link: /buildmyst
+  lang: D
+  lang-bg: B03931
+  lang-fg: ffffff
+  status: inactive
+  time: 2019
+  website: https://github.com/codemyst/buildmyst
+  source: https://github.com/codemyst/buildmyst
+  type: tools
+  stars: 4
+  description: !!str >
+    a very simple and customizable build system
+- name: VoteMyst
+  link: /votemyst
+  lang: C#
+  lang-bg: 178600
+  lang-fg: ffffff
+  status: active
+  time: 2020 - present
+  website: https://vote.myst.rs
+  source: https://github.com/codemyst/votemyst
+  type: web
+  stars: 6
+  description: !!str >
+    simple website for voting on content
+- name: Endless, Nameless
+  link: /endless
+  lang: Unity - C#
+  lang-bg: 178600
+  lang-fg: ffffff
+  time: 2017
+  website: https://codemyst.itch.io/endless-nameless
+  source: null
+  type: games
+  stars: 0
+  jam: Ludum Dare 40
+  description: !!str >
+    A 2D platformer where you play one level over and over, and every time a new thing gets added onto the level that makes it harder and harder to pass.
+- name: Spark of Life
+  link: /sparkoflife
+  lang: Unity - C#
+  lang-bg: 178600
+  lang-fg: ffffff
+  time: 2018
+  website: https://lemorrows.itch.io/spark-of-life
+  source: null
+  type: games
+  stars: 0
+  jam: Brackeys Game Jam 1
+  description: !!str >
+    A 3D puzzle game where you solve levels by shooting your light gun (not a flashlight!) at light orbs.
+- name: Bribe or Die
+  link: /bribeordie
+  lang: Unity - C#
+  lang-bg: 178600
+  lang-fg: ffffff
+  time: 2017
+  website: https://codemyst.itch.io/bribe-or-die
+  source: null
+  type: games
+  stars: 0
+  jam: Ludum Dare 39
+  description: !!str >
+    A game in which you are a corrupted leader trying to regain power by bribing mysterious creatures.
+- name: Run N' Cook
+  link: /runncook
+  lang: Unity - C#
+  lang-bg: 178600
+  lang-fg: ffffff
+  time: 2018
+  website: https://codemyst.itch.io/run-n-cook
+  source: null
+  type: games
+  stars: 0
+  jam: Ludum Dare 41
+  description: !!str >
+    Run N’ Cook is a run n’ gun plus cooking game mash-up.

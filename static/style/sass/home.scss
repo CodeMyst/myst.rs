@@ -1,0 +1,126 @@
+@use "vars" as v;
+
+#landing {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
+    .title {
+        font-size: 8rem;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1.15rem;
+    }
+
+    .top {
+        height: 35vh;
+        color: v.$color-nano;
+        display: flex;
+        justify-content: center;
+        background-color: v.$color-mystge;
+
+        .title {
+            align-self: flex-end;
+        }
+    }
+
+    .bottom {
+        height: 65vh;
+        color: v.$color-mystge;
+        background-color: v.$color-nano;
+
+        .title {
+            top: -15px;
+            position: relative;
+        }
+
+        nav {
+            a {
+                display: inline-block;
+                font-size: 2rem;
+                margin: 20px;
+                margin-top: 100px;
+                padding: 10px 20px;
+                background-color: v.$color-mystge;
+                color: v.$color-nano;
+                text-decoration: none;
+                width: 200px;
+
+                &:hover {
+                    background-color: v.$color-mystlue;
+                }
+            }
+        }
+    }
+}
+
+#projects {
+    .container {
+        p {
+            font-size: v.$font-size-normal;
+        }
+    }
+
+    .project-type {
+        font-size: 2rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-bottom: 2px solid v.$color-nanolight;
+        padding-bottom: 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        grid-auto-rows: minmax(100px, auto);
+
+        .project {
+            background-color: v.$color-nanolight;
+            padding: 20px;
+
+            .name {
+                margin-bottom: 15px;
+                display: block;
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+
+            .meta {
+                margin-bottom: 15px;
+                font-size: 0.85rem;
+
+                div {
+                    display: inline;
+                    margin-right: 15px;
+                }
+
+                .lang {
+                    padding: 2px 5px;
+                }
+            }
+
+            .links {
+                a {
+                    margin-right: 10px;
+                    text-decoration: none;
+                }
+            }
+
+            .description {
+                line-height: 1.5;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.text-section {
+    margin-top: 100px;
+
+    .container {
+        font-size: v.$font-size-normal;
+        line-height: 1.5;
+    }
+}

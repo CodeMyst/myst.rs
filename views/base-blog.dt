@@ -1,0 +1,11 @@
+extends base
+
+block body
+    #blog.container
+        h2 codemyst's blog
+        - static if (is(typeof(post)))
+            span #[a(href="/") <- home]#[a(href="/blog") /blog]
+        - else
+            a(href="/") <- home
+
+        block body-blog
