@@ -9,6 +9,8 @@ block body
 
             p.fields web - games - tools
             a.contact(href="mailto:code@myst.rs") code@myst.rs
+            span  - 
+            a.donate(href="https://paste.myst.rs/donate") donate
 
             nav
                 a(href="#projects") projects
