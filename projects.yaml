@@ -105,7 +105,8 @@ projects:
   stars: 0
   jam: Ludum Dare 40
   description: !!str >
-    A 2D platformer where you play one level over and over, and every time a new thing gets added onto the level that makes it harder and harder to pass.
+    A 2D platformer where you play one level over and over, and every time a new thing
+    gets added onto the level that makes it harder and harder to pass.
 - name: Spark of Life
   link: /sparkoflife
   lang: Unity - C#
@@ -118,7 +119,8 @@ projects:
   stars: 0
   jam: Brackeys Game Jam 1
   description: !!str >
-    A 3D puzzle game where you solve levels by shooting your light gun (not a flashlight!) at light orbs.
+    A 3D puzzle game where you solve levels by shooting your light gun (not a flashlight!)
+    at light orbs.
 - name: Bribe or Die
   link: /bribeordie
   lang: Unity - C#
@@ -131,7 +133,8 @@ projects:
   stars: 0
   jam: Ludum Dare 39
   description: !!str >
-    A game in which you are a corrupted leader trying to regain power by bribing mysterious creatures.
+    A game in which you are a corrupted leader trying to regain power by bribing mysterious
+    creatures.
 - name: Run N' Cook
   link: /runncook
   lang: Unity - C#

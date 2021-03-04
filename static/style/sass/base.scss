@@ -9,6 +9,10 @@ body {
     font-size: v.$font-size-normal;
 }
 
+h1 {
+    color: #ffffff;
+}
+
 a {
     color: v.$color-mystge;
 
@@ -17,10 +21,22 @@ a {
     }
 }
 
+.monospace {
+    font-family: v.$font-stack-monospace;
+}
+
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1280px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.container-small {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
     box-sizing: border-box;
     padding-top: 20px;
 }
@@ -43,8 +59,7 @@ a {
 footer {
     background-color: v.$color-nanolight;
     margin-top: 50px;
-    position: sticky;
-    bottom: 0;
+    margin-bottom: 20px;
 
     .container {
         display: flex;

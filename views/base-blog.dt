@@ -1,11 +1,14 @@
 extends base
 
 block body
-    #blog.container
-        h2 codemyst's blog
-        - static if (is(typeof(post)))
-            span #[a(href="/") <- home]#[a(href="/blog") /blog]
-        - else
-            a(href="/") <- home
+    #blog
+        .header
+            .container-small.monospace
+                - static if (is(typeof(post)))
+                    a(href="/") [codemyst
+                    a(href="/blog")  /blog]
+                - else
+                    a(href="/") [codemyst]
 
-        block body-blog
+        .container-small
+            block body-blog

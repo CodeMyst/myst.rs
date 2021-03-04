@@ -1,6 +1,7 @@
 module myst;
 
 import vibe.d;
+import std.datetime;
 import dyaml;
 
 public enum ProjectType
@@ -67,7 +68,7 @@ public struct Project
 public struct Post
 {
     string title;
-    string date;
+    Date date;
     string link;
     string path;
 }
@@ -142,7 +143,16 @@ class RootWeb
 
         auto content = fullContent[fullContent.indexOf("---", 4)+4..$];
 
+        // todo: check if post exists
+
         render!("blog-post.dt", post, content);
+    }
+
+    @path("/:project")
+    void getProject(string _project)
+    {
+        auto project = _project;
+        render!("project.dt", project);
     }
 }
 
@@ -150,6 +160,8 @@ Post[] getPosts()
 {
     import std.file : dirEntries, SpanMode, readText;
     import std.string : indexOf;
+    import std.algorithm : sort;
+    import std.datetime : Date;
 
     Post[] posts;
 
@@ -166,12 +178,16 @@ Post[] getPosts()
         Post p;
 
         p.title = root["title"].get!string;
-        p.date = root["date"].get!string;
+        p.date = cast(Date) root["date"].get!SysTime;
         p.link = root["link"].get!string;
         p.path = postFile;
 
         posts ~= p;
     }
+
+    posts.sort!((a, b) => 
+        a.date > b.date
+    );
 
     return posts;
 }

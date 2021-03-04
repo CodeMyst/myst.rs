@@ -36,11 +36,12 @@
         }
 
         nav {
+            margin-top: 50px;
+
             a {
                 display: inline-block;
                 font-size: 2rem;
                 margin: 20px;
-                margin-top: 100px;
                 padding: 10px 20px;
                 background-color: v.$color-mystge;
                 color: v.$color-nano;
@@ -75,6 +76,14 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         grid-auto-rows: minmax(100px, auto);
+
+        @media screen and (max-width: 860px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 620px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .project {
             background-color: v.$color-nanolight;

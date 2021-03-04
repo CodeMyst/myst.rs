@@ -3,6 +3,18 @@
 #blog {
     min-height: 100vh;
 
+    .header {
+        background-color: v.$color-nanolight;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+
+        .container-small {
+            padding: 0;
+        }
+    }
+
     .post {
         background-color: v.$color-nanolight;
         margin-top: 20px;
@@ -13,5 +25,9 @@
             margin-top: 10px;
             font-size: v.$font-size-small;
         }
+    }
+
+    .date {
+        font-size: v.$font-size-small;
     }
 }

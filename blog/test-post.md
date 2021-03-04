@@ -1,6 +1,6 @@
 ---
 title: Test Post
-date: 1 Mar 2021
+date: 2021-03-01
 link: test-post
 ---
 

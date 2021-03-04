@@ -50,7 +50,7 @@ block body
         .heading
             h2 about
 
-        .container
+        .container-small.markdown
             - import vibe.d;
             - import std.file;
             - import commonmarkd;

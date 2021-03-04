@@ -2,7 +2,8 @@ extends base-blog
 
 block body-blog
     h1= post.title
-    p= post.date
+    p.date= post.date
 
-    - import commonmarkd;
-    |!= convertMarkdownToHTML(content)
+    .markdown
+        - import commonmarkd;
+        |!= convertMarkdownToHTML(content, MarkdownFlag.tablesExtension | MarkdownFlag.enableStrikeThrough | MarkdownFlag.latexMathSpans)
