@@ -4,6 +4,7 @@ import vibe.d;
 import std.datetime;
 import dyaml;
 
+///
 public enum ProjectType
 {
     web,
@@ -11,22 +12,37 @@ public enum ProjectType
     tools,
 }
 
+///
 public struct Project
 {
+    ///
     string name;
+    ///
     string link;
+    ///
     string lang;
+    ///
     string langBg;
+    ///
     string langFg;
+    ///
     string status;
+    ///
     string time;
+    ///
     string website;
+    ///
     string source;
+    ///
     string description;
+    ///
     string jam;
+    ///
     ProjectType projectType;
+    ///
     uint stars;
 
+    ///
     this(const Node node)
     {
         import std.conv : to;
@@ -60,19 +76,27 @@ public struct Project
             status = null;
         }
 
-        string typeString = node["type"].as!string;
+        const typeString = node["type"].as!string;
         projectType = typeString.to!ProjectType;
     }
 }
 
+/++
+ + post struct
+ +/
 public struct Post
 {
+    ///
     string title;
+    ///
     Date date;
+    ///
     string link;
+    ///
     string path;
 }
 
+///
 string pat;
 
 void main()
@@ -91,6 +115,7 @@ void main()
     auto serverSettings = new HTTPServerSettings();
     serverSettings.bindAddresses = ["127.0.0.1"];
     serverSettings.port = 5000;
+    serverSettings.errorPageHandler = toDelegate(&displayError);
 
     router.registerWebInterface(new RootWeb());
 
@@ -101,6 +126,23 @@ void main()
     runApplication();
 }
 
+/++
+ + Renders an error page, everytime an error occured
+ +/
+void displayError(HTTPServerRequest req, HTTPServerResponse res, HTTPServerErrorInfo error)
+{
+    import std.file : append;
+    import std.datetime.systime : Clock;
+
+    string errorDebug = "";
+    debug errorDebug = error.debugMessage;
+
+    res.render!("error.dt", error, errorDebug);
+}
+
+/++
+ + root web interface
+ +/
 class RootWeb
 {
     @path("/")
@@ -123,7 +165,7 @@ class RootWeb
     @path("/blog")
     void getBlog()
     {
-        auto posts = getPosts();
+        const posts = getPosts();
 
         render!("blog-list.dt", posts);
     }
@@ -135,15 +177,15 @@ class RootWeb
         import std.file : readText;
         import std.string : indexOf;
 
-        auto posts = getPosts();
+        auto posts = getPosts().find!((a, b) => a.link == b)(_post);
 
-        auto post = posts.find!((a, b) => a.link == b)(_post)[0];
+        if (posts.length == 0) return;
+
+        auto post = posts[0];
 
         auto fullContent = post.path.readText();
 
-        auto content = fullContent[fullContent.indexOf("---", 4)+4..$];
-
-        // todo: check if post exists
+        const content = fullContent[fullContent.indexOf("---", 4)+4..$];
 
         render!("blog-post.dt", post, content);
     }
@@ -151,7 +193,12 @@ class RootWeb
     @path("/:project")
     void getProject(string _project)
     {
-        auto project = _project;
+        import std.file : exists;
+
+        const project = _project;
+
+        if (!exists("projects/"~project~".md")) return;
+
         render!("project.dt", project);
     }
 }
@@ -260,6 +307,7 @@ uint getStars(Project p)
     return stars;
 }
 
+///
 string getPat()
 {
     import std.file : readText;
@@ -268,6 +316,7 @@ string getPat()
     return readText("pat.txt").strip();
 }
 
+///
 void cacheStars()
 {
     import std.stdio : File;
@@ -280,8 +329,6 @@ void cacheStars()
         auto p = project.as!Project;
         project["stars"] = getStars(p);
     }
-
-    // dumper().dump(stdout.lockingTextWriter, root);
 
     auto f = File("projects.yaml", "w");
 
