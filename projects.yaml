@@ -13,8 +13,8 @@ projects:
   type: web
   stars: 37
   description: !!str >
-    a powerful website for storing and sharing text and code snippets. completely
-    free and open source.
+    A powerful website for storing and sharing text and code snippets. Completely
+    free and open source
 - name: pastry
   link: /pastry
   lang: D
@@ -27,7 +27,7 @@ projects:
   type: tools
   stars: 5
   description: !!str >
-    a command line tool for pasting files to pastemyst
+    A command line tool for pasting files to PasteMyst
 - name: pastemyst-d
   link: /pastemyst-d
   lang: D
@@ -40,7 +40,7 @@ projects:
   type: web
   stars: 4
   description: !!str >
-    pastemyst api wrapper written in D
+    PasteMyst API wrapper written in D
 - name: IssueMyst
   link: /issuemyst
   lang: Rust
@@ -53,7 +53,7 @@ projects:
   type: web
   stars: 2
   description: !!str >
-    small website that fetches a random issue from a github repo
+    Small website that fetches a random issue from a GitHub repo
 - name: zigmath
   link: /zigmath
   lang: Zig
@@ -66,7 +66,7 @@ projects:
   type: games
   stars: 0
   description: !!str >
-    naive math lib intended for games written in zig
+    Naive math lib intended for games written in Zig
 - name: BuildMyst
   link: /buildmyst
   lang: D
@@ -79,7 +79,7 @@ projects:
   type: tools
   stars: 4
   description: !!str >
-    a very simple and customizable build system
+    A very simple and customizable build system
 - name: VoteMyst
   link: /votemyst
   lang: C#
@@ -92,7 +92,7 @@ projects:
   type: web
   stars: 6
   description: !!str >
-    simple website for voting on content
+    A simple website for voting on user submitted content
 - name: Endless, Nameless
   link: /endless
   lang: Unity - C#

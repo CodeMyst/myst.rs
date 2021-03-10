@@ -12,3 +12,9 @@ block body
 
         .container-small
             block body-blog
+
+block scripts
+    script(src="/static/scripts/highlight.js")
+
+    script.
+        hljs.initHighlightingOnLoad();

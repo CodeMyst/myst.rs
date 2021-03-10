@@ -15,6 +15,13 @@
     h1,
     h2 {
         border-bottom: 2px solid v.$color-nanolight;
+
+        img {
+            width: initial;
+            display: initial;
+            margin: initial;
+            border: none;
+        }
     }
 
     code {
@@ -57,7 +64,6 @@
     }
 
     pre {
-        overflow-x: scroll;
         padding: 20px;
         background-color: v.$color-nanolight;
         font-size: v.$font-size-code;

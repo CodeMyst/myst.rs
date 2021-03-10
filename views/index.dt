@@ -13,9 +13,19 @@ block body
             a.donate(href="https://paste.myst.rs/donate") donate
 
             nav
-                a(href="#projects") projects
                 a(href="#about") about
+                a(href="#projects") projects
                 a(href="/blog") blog
+
+    #about.text-section
+        .heading
+            h2 about
+
+        .container-small.markdown
+            - import vibe.d;
+            - import std.file;
+            - import commonmarkd;
+            |!= convertMarkdownToHTML(readFileUTF8(NativePath("pages/about.md")))
 
     #projects
         .heading
@@ -47,13 +57,3 @@ block body
                                 - if (project.source != "null")
                                     a(href=project.source) source
                             .description= project.description
-
-    #about.text-section
-        .heading
-            h2 about
-
-        .container-small.markdown
-            - import vibe.d;
-            - import std.file;
-            - import commonmarkd;
-            |!= convertMarkdownToHTML(readFileUTF8(NativePath("pages/about.md")))
