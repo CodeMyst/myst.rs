@@ -1,7 +1,12 @@
 doctype html
 html(lang="en")
     head
-        title codemyst
+        - static if (is(typeof(post)))
+            title codemyst - #{post.title}
+        - static if (is(typeof(posts)))
+            title codemyst - blog
+        - else
+            title codemyst
 
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
