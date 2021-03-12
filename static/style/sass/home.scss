@@ -54,6 +54,16 @@
             }
         }
     }
+
+    @media screen and (max-width: 720px) {
+        .top {
+            height: 20vh;
+        }
+
+        .bottom {
+            height: 80vh;
+        }
+    }
 }
 
 #projects {
