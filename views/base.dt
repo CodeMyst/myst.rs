@@ -23,14 +23,14 @@ html(lang="en")
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap", rel="stylesheet")
 
-        meta(name="description", content="CodeMyst's personal portfolio website.")
+        meta(name="description", content="CodeMyst's personal portfolio and blog.")
 
         meta(property="og:type", content="website")
         meta(property="og:url", content="https://myst.rs/")
-        meta(property="og:description", content="CodeMyst's personal portfolio website.")
+        meta(property="og:description", content="CodeMyst's personal portfolio and blog.")
 
         meta(property="twitter:url", content="https://myst.rs/")
-        meta(property="twitter:description", content="CodeMyst's personal portfolio website.")
+        meta(property="twitter:description", content="CodeMyst's personal portfolio and blog.")
 
         meta(name="theme-color", content="#ee720d")
 
