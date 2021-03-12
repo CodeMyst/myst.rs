@@ -1,12 +1,18 @@
 doctype html
 html(lang="en")
     head
+        - string _title = "";
         - static if (is(typeof(post)))
-            title codemyst - #{post.title}
-        - static if (is(typeof(posts)))
-            title codemyst - blog
+            - _title = "codemyst - " ~ post.title;
+        - else static if (is(typeof(posts)))
+            - _title = "codemyst - blog";
         - else
-            title codemyst
+            - _title = "codemyst";
+
+        title= _title
+        meta(name="title", content=_title)
+        meta(property="og:title", content=_title)
+        meta(property="twitter:title", content=_title)
 
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -16,6 +22,19 @@ html(lang="en")
 
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap", rel="stylesheet")
+
+        meta(name="description", content="CodeMyst's personal portfolio website.")
+
+        meta(property="og:type", content="website")
+        meta(property="og:url", content="https://myst.rs/")
+        meta(property="og:description", content="CodeMyst's personal portfolio website.")
+
+        meta(property="twitter:url", content="https://myst.rs/")
+        meta(property="twitter:description", content="CodeMyst's personal portfolio website.")
+
+        meta(name="theme-color", content="#ee720d")
+
+        link(rel="shortcut icon", type="image/x-icon", href="/static/images/favicon.ico")
 
         block head
 
