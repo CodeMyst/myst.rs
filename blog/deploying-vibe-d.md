@@ -126,4 +126,4 @@ Also big thanks to GitHub for allowing us to run bad code on their servers for f
 
 Here's the full workflow script for all your lazy people (or people who just want to get stuff done fast). And it's displayed using a pastemyst embed just to flex this amazing feature you should definitely use (if the script doesn't actually load let's just say this was the comedic part of the post).
 
-<iframe src='https://paste.myst.rs/mqph68fx/embed' scrolling='no' style='border:none;'></iframe><script src='https://paste.myst.rs/static/scripts/libs/iframeResizer.js'></script><script>iFrameResize();</script>
+<iframe src='https://paste.myst.rs/mjoufaht/embed' scrolling='no' style='border:none;'></iframe><script src='https://paste.myst.rs/static/scripts/libs/iframeResizer.js'></script><script>iFrameResize();</script>
