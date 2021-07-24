@@ -36,6 +36,8 @@ html(lang="en")
 
         link(rel="shortcut icon", type="image/x-icon", href="/static/images/favicon.ico")
 
+        script(async, defer, data-domain="myst.rs", src="https://stats.myst.rs/js/plausible.js")
+
         block head
 
     body
