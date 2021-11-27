@@ -148,3 +148,16 @@ projects:
   jam: Ludum Dare 41
   description: !!str >
     Run N’ Cook is a run n’ gun plus cooking game mash-up.
+- name: PhysacD
+  link: /physacd
+  lang: D
+  lang-bg: B03931
+  lang-fg: ffffff
+  status: active
+  time: 2021 - present
+  website: https://github.com/codemyst/PhysacD
+  source: https://github.com/codemyst/PhysacD
+  type: games
+  stars: 4
+  description: !!str >
+    D port of the Physac library. Physics library for games.
