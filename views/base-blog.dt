@@ -1,0 +1,20 @@
+extends base
+
+block body
+    #blog
+        .header
+            .container-small.monospace
+                - static if (is(typeof(post)))
+                    a(href="/") [codemyst
+                    a(href="/blog")  /blog]
+                - else
+                    a(href="/") [codemyst]
+
+        .container-small
+            block body-blog
+
+block scripts
+    script(src="/static/scripts/highlight.js")
+
+    script.
+        hljs.initHighlightingOnLoad();

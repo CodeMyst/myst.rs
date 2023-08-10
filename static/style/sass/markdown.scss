@@ -1,0 +1,80 @@
+@use "vars" as v;
+
+.markdown {
+    line-height: 1.5;
+    margin-bottom: 2em;
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid v.$color-nanolight;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    h1,
+    h2 {
+        border-bottom: 2px solid v.$color-nanolight;
+
+        img {
+            width: initial;
+            display: initial;
+            margin: initial;
+            border: none;
+        }
+    }
+
+    code {
+        background-color: v.$color-nanolight;
+        padding: 2px 5px;
+    }
+
+    blockquote {
+        border-left: 5px solid v.$color-mystlue;
+        padding-left: 20px;
+
+        ul,
+        ol {
+            padding-left: 20px;
+        }
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        max-width: 100%;
+        width: 100%;
+
+        th {
+            text-align: left;
+            font-weight: bold;
+            vertical-align: bottom;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        th,
+        td {
+            padding: 0.25rem 1rem;
+            line-height: inherit;
+            border-bottom: 1px solid v.$color-nanolight;
+        }
+    }
+
+    pre {
+        padding: 20px;
+        background-color: v.$color-nanolight;
+        font-size: v.$font-size-code;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    p {
+        text-align: justify;
+    }
+}

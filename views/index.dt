@@ -1,0 +1,59 @@
+extends base
+
+block body
+    #landing
+        .top
+            .title code
+        .bottom
+            .title myst
+
+            p.fields web - games - tools
+            a.contact(href="mailto:code@myst.rs") code@myst.rs
+            span  - 
+            a.donate(href="https://paste.myst.rs/donate") donate
+
+            nav
+                a(href="#about") about
+                a(href="#projects") projects
+                a(href="/blog") blog
+
+    #about.text-section
+        .heading
+            h2 about
+
+        .container-small.markdown
+            - import vibe.d;
+            - import std.file;
+            - import commonmarkd;
+            |!= convertMarkdownToHTML(readFileUTF8(NativePath("pages/about.md")))
+
+    #projects
+        .heading
+            h2 projects
+
+        .container
+            p check out #[a(href="https://github.com/codemyst") github/codemyst] for more projects
+
+            - import myst;
+            - import std.traits;
+            - foreach (t; [EnumMembers!ProjectType])
+                h3.project-type= t
+                .grid
+                    - foreach (project; projects)
+                        - if (project.projectType != t) continue;
+                        .project
+                            a.name(href=project.link, title="learn more about this project")= project.name
+                            .meta
+                                .lang(style="background-color: ##{project.langBg}; color: ##{project.langFg};")= project.lang
+                                - if (project.stars > 0)
+                                    .stars #{project.stars} stars
+                                - if (project.status !is null)
+                                    .status= project.status
+                                .time= project.time
+                                - if (project.jam !is null)
+                                    .jam= project.jam
+                            .links
+                                a(href=project.website) website
+                                - if (project.source != "null")
+                                    a(href=project.source) source
+                            .description= project.description

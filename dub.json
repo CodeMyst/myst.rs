@@ -1,0 +1,14 @@
+{
+	"authors": [
+		"codemyst"
+	],
+	"copyright": "Copyright © 2021, codemyst",
+	"dependencies": {
+		"commonmark-d": "~>1.0.8",
+		"dyaml": "~>0.8.3",
+		"vibe-d": "~>0.9.3"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "myst-rs"
+}

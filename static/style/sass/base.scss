@@ -1,0 +1,73 @@
+@use "vars" as v;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: v.$font-stack;
+    color: v.$color-white;
+    background-color: v.$color-nano;
+    font-size: v.$font-size-normal;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+a {
+    color: v.$color-mystge;
+
+    &:hover {
+        color: v.$color-mystlue;
+    }
+}
+
+.monospace {
+    font-family: v.$font-stack-monospace;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.container-small {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.heading {
+    background-color: v.$color-mystge;
+    color: v.$color-nano;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    background-color: v.$color-nanolight;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+}

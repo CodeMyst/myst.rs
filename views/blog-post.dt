@@ -1,0 +1,23 @@
+extends base-blog
+
+block body-blog
+    h1= post.title
+    p.date= post.date
+
+    .markdown
+        - import commonmarkd;
+        |!= convertMarkdownToHTML(content, MarkdownFlag.tablesExtension | MarkdownFlag.enableStrikeThrough | MarkdownFlag.latexMathSpans)
+
+    .comments
+        script(src="https://giscus.app/client.js",
+                data-repo="CodeMyst/myst.rs",
+                data-repo-id="MDEwOlJlcG9zaXRvcnkzMTA0MDU0OTk=",
+                data-category="Announcements",
+                data-category-id="DIC_kwDOEoBpe84B_tVE",
+                data-mapping="pathname",
+                data-reactions-enabled="0",
+                data-emit-metadata="0",
+                data-theme="dark_dimmed",
+                data-lang="en",
+                crossorigin="anonymous",
+                async)
