@@ -1,0 +1,298 @@
+:root {
+    --color-bg0: #141414;
+    --color-bg1: #1c1c1c;
+    --color-bg2: #222222;
+    --color-bg3: #777777;
+    --color-fg: #cecece;
+    --color-main: #ee720d;
+    --color-accent: #1EAEDB;
+    --color-danger: #ff4c4c;
+    --color-success: #2ec933;
+
+    --font-size-code: 1rem;
+    --font-size-small: 1rem;
+    --font-size-normal: 1.2rem;
+    --font-size-medium: 1.5rem;
+    --font-size-big: 3rem;
+
+    --border-radius: 0.2rem;
+
+    --break-small: 640px;
+
+    --font-stack: 'Ubuntu', sans-serif;
+    --font-stack-monospace: 'Ubuntu Mono', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack);
+    color: var(--color-fg);
+    background-color: var(--color-bg0);
+    font-size: var(--font-size-normal);
+}
+
+h1 {
+    color: #ffffff;
+}
+
+a {
+    color: var(--color-main);
+
+    &:hover {
+        color: var(--color-accent);
+    }
+}
+
+.monospace {
+    font-family: var(--font-stack-monospace);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.container-small {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: var(--color-bg1);
+    border: 1px solid var(--color-bg2);
+    font-size: var(--font-size-small);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+footer .container p {
+    margin: 0;
+}
+
+#blog {
+    min-height: 90vh;
+}
+
+#blog .header {
+    background-color: var(--color-bg1);
+    border-top: 1px solid var(--color-bg2);
+    border-bottom: 1px solid var(--color-bg2);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+#blog .header .container-small {
+    padding: 0;
+}
+
+#blog .post {
+    background-color: var(--color-bg1);
+    border: 1px solid var(--color-bg2);
+    margin-top: 20px;
+    padding: 20px;
+    transition: border-color 100ms ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+#blog .post:hover {
+    border-color: var(--color-bg3);
+}
+
+#blog .post p {
+    margin: 0;
+    margin-top: 10px;
+    font-size: var(--font-size-small);
+}
+
+#blog .date {
+    font-size: var(--font-size-small);
+}
+
+#blog .comments {
+    margin-bottom: 2rem;
+}
+
+#landing {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    min-height: 90vh;
+}
+
+#landing .title {
+    font-size: 8rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1.15rem;
+}
+
+#landing .top {
+    height: 25vh;
+    color: var(--color-bg0);
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-main);
+}
+
+#landing .top .title {
+    align-self: flex-end;
+}
+
+#landing .bottom {
+    color: var(--color-main);
+    background-color: var(--color-bg0);
+}
+
+#landing .bottom .title {
+    top: -15px;
+    position: relative;
+}
+
+#landing .about-me {
+    font-size: var(--font-size-normal);
+    letter-spacing: initial;
+}
+
+#landing .projects {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: var(--font-size-small);
+    letter-spacing: initial;
+    text-align: left;
+}
+
+#landing .projects .project {
+    background-color: var(--color-bg1);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    width: calc(100%/3);
+    border: 1px solid var(--color-bg2);
+    transition: border-color 100ms ease-in-out;
+}
+
+#landing .projects .project:hover {
+    border-color: var(--color-bg3);
+}
+
+#landing .projects .project a {
+    margin-top: 0;
+    font-size: var(--font-size-normal);
+}
+
+@media screen and (max-width: 720px) {
+    #landing .top {
+        height: 20vh;
+    }
+
+    #landing .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #landing .projects .project {
+        width: 80%;
+    }
+}
+
+.text-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.text-section .container {
+    font-size: var(--font-size-normal);
+    line-height: 1.5;
+}
+
+.markdown {
+    line-height: 1.5;
+    margin-bottom: 2em;
+}
+
+.markdown img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--color-bg2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.markdown h1, .markdown h2 {
+    border-bottom: 2px solid var(--color-bg2);
+}
+
+.markdown h1 img, .markdown h2 img {
+    width: initial;
+    display: initial;
+    margin: initial;
+    border: none;
+}
+
+.markdown code {
+    background-color: var(--color-bg2);
+    padding: 2px 5px;
+}
+
+.markdown blockquote {
+    border-left: 5px solid var(--color-accent);
+    padding-left: 20px;
+}
+
+.markdown blockquote ul, .markdown blockquote ol {
+    padding-left: 20px;
+}
+
+.markdown table {
+    border-collapse: separate;
+    border-spacing: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.markdown table th {
+    text-align: left;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+.markdown table td {
+    vertical-align: top;
+}
+
+.markdown table th, .markdown table td {
+    padding: 0.25rem 1rem;
+    line-height: inherit;
+    border-bottom: 1px solid var(--color-bg2);
+}
+
+.markdown pre {
+    padding: 20px;
+    background-color: var(--color-bg2);
+    font-size: var(--font-size-code);
+}
+
+.markdown iframe {
+    width: 100%;
+}
+
+.markdown p {
+    text-align: justify;
+}
+

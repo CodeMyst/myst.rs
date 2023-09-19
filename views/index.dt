@@ -4,56 +4,25 @@ block body
     #landing
         .top
             .title code
+
         .bottom
             .title myst
 
-            p.fields web - games - tools
-            a.contact(href="mailto:code@myst.rs") code@myst.rs
-            span  - 
-            a.donate(href="https://paste.myst.rs/donate") donate
+            span #[a(href="mailto:code@myst.rs") code@myst.rs] - #[a(href="/blog") blog] - #[a(href="https://github.com", target="_blank") github]
 
-            nav
-                a(href="#about") about
-                a(href="#projects") projects
-                a(href="/blog") blog
+        .about-me.container-small
+            p Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming.
 
-    #about.text-section
-        .heading
-            h2 about
+        .projects.container
+            .project
+                a(href="https://paste.myst.rs", target="_blank") PasteMyst
+                p A powerful website for storing and sharing text and code snippets
 
-        .container-small.markdown
-            - import vibe.d;
-            - import std.file;
-            - import commonmarkd;
-            |!= convertMarkdownToHTML(readFileUTF8(NativePath("pages/about.md")))
+            .project
+                a(href="https://github.com/cosmomyst/dath", target="_blank") Dath
+                p A math library written in D for game programming
 
-    #projects
-        .heading
-            h2 projects
+            .project
+                a(href="https://codemyst.itch.io/endless-nameless", target="_blank") Endless, Nameless
+                p A 2D platformer with an interesting concept made in a single weekend
 
-        .container
-            p check out #[a(href="https://github.com/codemyst") github/codemyst] for more projects
-
-            - import myst;
-            - import std.traits;
-            - foreach (t; [EnumMembers!ProjectType])
-                h3.project-type= t
-                .grid
-                    - foreach (project; projects)
-                        - if (project.projectType != t) continue;
-                        .project
-                            a.name(href=project.link, title="learn more about this project")= project.name
-                            .meta
-                                .lang(style="background-color: ##{project.langBg}; color: ##{project.langFg};")= project.lang
-                                - if (project.stars > 0)
-                                    .stars #{project.stars} stars
-                                - if (project.status !is null)
-                                    .status= project.status
-                                .time= project.time
-                                - if (project.jam !is null)
-                                    .jam= project.jam
-                            .links
-                                a(href=project.website) website
-                                - if (project.source != "null")
-                                    a(href=project.source) source
-                            .description= project.description
