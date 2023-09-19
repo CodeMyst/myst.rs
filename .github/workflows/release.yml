@@ -5,17 +5,13 @@ on: workflow_dispatch
 jobs:
   deploy:
     name: Deploy to server
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - name: install D
         uses: dlang-community/setup-dlang@v1
         with:
           compiler: dmd-latest
-      - name: Checkout submodules
-        uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
       - name: build
         run: dub build -b release
       - name: upload to server
