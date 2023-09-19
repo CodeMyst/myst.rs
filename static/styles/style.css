@@ -172,6 +172,7 @@ footer .container p {
     flex-direction: row;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: var(--font-size-small);
     letter-spacing: initial;
     text-align: left;
