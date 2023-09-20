@@ -14,15 +14,15 @@ block body
             p Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming.
 
         .projects.container
-            .project
-                a(href="https://paste.myst.rs", target="_blank") PasteMyst
+            a.project(href="https://paste.myst.rs", target="_blank")
+                p PasteMyst
                 p A powerful website for storing and sharing text and code snippets
 
-            .project
-                a(href="https://github.com/cosmomyst/dath", target="_blank") Dath
+            a.project(href="https://github.com/cosmomyst/dath", target="_blank")
+                p Dath
                 p A math library written in D for game programming
 
-            .project
-                a(href="https://codemyst.itch.io/endless-nameless", target="_blank") Endless, Nameless
+            a.project(href="https://codemyst.itch.io/endless-nameless", target="_blank")
+                p Endless, Nameless
                 p A 2D platformer with an interesting concept made in a single weekend
 

@@ -130,6 +130,7 @@ footer .container p {
     font-size: 1.5rem;
     letter-spacing: 2px;
     min-height: 90vh;
+    line-height: 1.5;
 }
 
 #landing .title {
@@ -146,6 +147,7 @@ footer .container p {
     display: flex;
     justify-content: center;
     background-color: var(--color-main);
+    line-height: initial;
 }
 
 #landing .top .title {
@@ -153,13 +155,15 @@ footer .container p {
 }
 
 #landing .bottom {
-    color: var(--color-main);
+    color: var(--color-bg3);
     background-color: var(--color-bg0);
+    line-height: initial;
 }
 
 #landing .bottom .title {
     top: -15px;
     position: relative;
+    color: var(--color-main);
 }
 
 #landing .about-me {
@@ -185,15 +189,23 @@ footer .container p {
     width: calc(100%/3);
     border: 1px solid var(--color-bg2);
     transition: border-color 100ms ease-in-out;
+    color: var(--color-fg);
+    text-decoration: none;
 }
 
 #landing .projects .project:hover {
     border-color: var(--color-bg3);
 }
 
-#landing .projects .project a {
+#landing .projects .project:hover p:first-child {
+    color: var(--color-accent);
+}
+
+#landing .projects .project p:first-child {
     margin-top: 0;
     font-size: var(--font-size-normal);
+    color: var(--color-main);
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 720px) {
