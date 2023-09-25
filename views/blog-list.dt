@@ -2,6 +2,6 @@ extends base-blog
 
 block body-blog
     - foreach (post; posts)
-        .post
-            a(href="/blog/"~post.link)= post.title
+        a.post(href="/blog/"~post.link)
+            p= post.title
             p.date #{post.date.day} #{post.date.month} #{post.date.year}

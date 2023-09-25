@@ -105,6 +105,21 @@ footer .container p {
     padding: 20px;
     transition: border-color 100ms ease-in-out;
     border-radius: var(--border-radius);
+    display: block;
+    transition: border-color 100ms ease-in-out;
+    color: var(--color-fg);
+    text-decoration: none;
+}
+
+#blog .post p:first-child {
+    margin-top: 0;
+    font-size: var(--font-size-normal);
+    color: var(--color-main);
+    text-decoration: underline;
+}
+
+#blog .post:hover p:first-child {
+    color: var(--color-accent);
 }
 
 #blog .post:hover {
