@@ -2,16 +2,20 @@ extends base
 
 block body
     #landing
-        .top
-            .landing-title code
+        h1
+            span.top
+                span.landing-title code
 
-        .bottom
-            .landing-title myst
+            span.bottom
+                span.landing-title myst
 
-            span #[a(href="mailto:code@myst.rs") code@myst.rs] - #[a(href="/blog") blog] - #[a(href="https://github.com", target="_blank") github]
+        nav
+            a(href="mailto:code@myst.rs") code@myst.rs
+            a(href="/blog") blog
+            a(href="https://github.com", target="_blank") github
 
         .about-me.container-small
-            p Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming.
+            h3 Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming.
 
         .projects.container
             a.project(href="https://paste.myst.rs", target="_blank")
