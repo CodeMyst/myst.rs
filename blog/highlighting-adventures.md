@@ -1,5 +1,6 @@
 ---
 title: Adventures In Highlighting Code In The Browser
+summary: A comparison of different ways to do syntax highlighting in the web browser
 date: 2021-11-05
 link: highlighting-adventures
 ---

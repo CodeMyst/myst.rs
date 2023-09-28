@@ -3,10 +3,10 @@ extends base
 block body
     #landing
         .top
-            .title code
+            .landing-title code
 
         .bottom
-            .title myst
+            .landing-title myst
 
             span #[a(href="mailto:code@myst.rs") code@myst.rs] - #[a(href="/blog") blog] - #[a(href="https://github.com", target="_blank") github]
 
@@ -26,3 +26,10 @@ block body
                 p Endless, Nameless
                 p A 2D platformer with an interesting concept made in a single weekend
 
+        .latest-post.container-small
+            p Here's the latest post from my #[a(href="/blog") blog]:
+
+            a.post(href="/blog/"~latestPost.link)
+                p.title= latestPost.title
+                p.date #{latestPost.date.day} #{latestPost.date.month} #{latestPost.date.year}
+                p.summary= latestPost.summary

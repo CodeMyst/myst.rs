@@ -49,6 +49,6 @@ html(lang="en")
                 - import std.datetime : Clock;
                 - import std.conv : to;
                 - string year = Clock.currTime().year.to!string();
-                p copyright © codemyst #{year}
+                p Copyright © CodeMyst #{year}
 
         block scripts

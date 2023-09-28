@@ -4,18 +4,12 @@ import vibe.d;
 import std.datetime;
 import dyaml;
 
-/++
- + post struct
- +/
 public struct Post
 {
-    ///
     string title;
-    ///
+    string summary;
     Date date;
-    ///
     string link;
-    ///
     string path;
 }
 
@@ -40,9 +34,6 @@ void main()
     runApplication();
 }
 
-/++
- + Renders an error page, everytime an error occured
- +/
 void displayError(HTTPServerRequest req, HTTPServerResponse res, HTTPServerErrorInfo error)
 {
     import std.file : append;
@@ -62,7 +53,10 @@ class RootWeb
     @path("/")
     void getIndex()
     {
-        render!("index.dt");
+        const posts = getPosts();
+        const latestPost = posts[0];
+
+        render!("index.dt", latestPost);
     }
 
     @path("/blog")
@@ -128,6 +122,7 @@ Post[] getPosts()
         Post p;
 
         p.title = root["title"].get!string;
+        p.summary = root["summary"].get!string;
         p.date = cast(Date) root["date"].get!SysTime;
         p.link = root["link"].get!string;
         p.path = postFile;

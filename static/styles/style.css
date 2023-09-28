@@ -68,6 +68,7 @@ footer {
     background-color: var(--color-bg1);
     border: 1px solid var(--color-bg2);
     font-size: var(--font-size-small);
+    margin-top: 2rem;
 }
 
 footer .container {
@@ -98,7 +99,7 @@ footer .container p {
     padding: 0;
 }
 
-#blog .post {
+.post {
     background-color: var(--color-bg1);
     border: 1px solid var(--color-bg2);
     margin-top: 20px;
@@ -109,31 +110,40 @@ footer .container p {
     transition: border-color 100ms ease-in-out;
     color: var(--color-fg);
     text-decoration: none;
+    text-align: left;
+    letter-spacing: initial;
+    line-height: 1.5;
 }
 
-#blog .post p:first-child {
+.post .title {
     margin-top: 0;
     font-size: var(--font-size-normal);
     color: var(--color-main);
     text-decoration: underline;
 }
 
-#blog .post:hover p:first-child {
+.post:hover .title {
     color: var(--color-accent);
 }
 
-#blog .post:hover {
+.post:hover .summary {
+    color: var(--color-fg);
+}
+
+.post:hover {
     border-color: var(--color-bg3);
 }
 
-#blog .post p {
+.post p {
     margin: 0;
     margin-top: 10px;
     font-size: var(--font-size-small);
 }
 
-#blog .date {
+.post .date {
     font-size: var(--font-size-small);
+    color: var(--color-bg3);
+    margin-top: 0;
 }
 
 #blog .comments {
@@ -148,7 +158,7 @@ footer .container p {
     line-height: 1.5;
 }
 
-#landing .title {
+#landing .landing-title {
     font-size: 8rem;
     padding: 0;
     margin: 0;
@@ -165,7 +175,7 @@ footer .container p {
     line-height: initial;
 }
 
-#landing .top .title {
+#landing .top .landing-title {
     align-self: flex-end;
 }
 
@@ -175,7 +185,7 @@ footer .container p {
     line-height: initial;
 }
 
-#landing .bottom .title {
+#landing .bottom .landing-title {
     top: -15px;
     position: relative;
     color: var(--color-main);
@@ -221,6 +231,23 @@ footer .container p {
     font-size: var(--font-size-normal);
     color: var(--color-main);
     text-decoration: underline;
+}
+
+#landing .projects .project p:last-child {
+    margin-bottom: 0;
+}
+
+#landing .latest-post {
+    font-size: var(--font-size-normal);
+    letter-spacing: initial;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 720px) {
+    #landing .latest-post .post {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 720px) {
