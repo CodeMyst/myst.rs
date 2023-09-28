@@ -2,7 +2,7 @@ extends base-blog
 
 block body-blog
     h1= post.title
-    p.date #{post.date.day} #{post.date.month} #{post.date.year}
+    p.date Published on: #{post.date.day} #{post.date.month} #{post.date.year}
 
     .markdown
         - import commonmarkd;

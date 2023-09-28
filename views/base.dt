@@ -9,9 +9,18 @@ html(lang="en")
         - else
             - _title = "CodeMyst";
 
+        - string _description = "Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming. This is my personal portfolio and blog.";
+        - static if (is(typeof(post)))
+            - _description = post.summary ~ "\n\n" ~ _description;
+
+        - static if (is(typeof(post)))
+            meta(property="article:published_time", content=post.date.toISOExtString())
+
         title= _title
         meta(name="title", content=_title)
         meta(property="og:title", content=_title)
+        meta(property="og:site_name", content="CodeMyst")
+        meta(name="application-name", content="CodeMyst")
         meta(property="twitter:title", content=_title)
 
         meta(charset="UTF-8")
@@ -24,14 +33,16 @@ html(lang="en")
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap", rel="stylesheet")
 
-        meta(name="description", content="CodeMyst's personal portfolio and blog.")
+        meta(name="description", content=_description)
 
         meta(property="og:type", content="website")
         meta(property="og:url", content="https://myst.rs/")
-        meta(property="og:description", content="CodeMyst's personal portfolio and blog.")
+        meta(property="og:description", content=_description)
 
         meta(property="twitter:url", content="https://myst.rs/")
-        meta(property="twitter:description", content="CodeMyst's personal portfolio and blog.")
+        meta(property="twitter:description", content=_description)
+
+        meta(name="robots", content="index, follow")
 
         meta(name="theme-color", content="#ee720d")
 

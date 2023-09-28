@@ -3,7 +3,7 @@ extends base
 block body
     #blog
         .header
-            .container-small.monospace
+            nav.container-small.monospace
                 - static if (is(typeof(post)))
                     a(href="/") [codemyst
                     a(href="/blog")  /blog]
