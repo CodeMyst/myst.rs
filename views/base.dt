@@ -11,7 +11,7 @@ html(lang="en")
 
         - string _description = "Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming. This is my personal portfolio and blog.";
         - static if (is(typeof(post)))
-            - _description = post.summary ~ "\n\n" ~ _description;
+            - _description = post.summary ~ ".\n\n" ~ _description;
 
         - static if (is(typeof(post)))
             meta(property="article:published_time", content=post.date.toISOExtString())
