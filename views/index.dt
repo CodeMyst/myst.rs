@@ -12,7 +12,7 @@ block body
         nav
             a(href="mailto:code@myst.rs") code@myst.rs
             a(href="/blog") blog
-            a(href="https://github.com", target="_blank") github
+            a(href="https://github.com/codemyst", target="_blank") github
 
         .about-me.container-small
             h3 Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming.
