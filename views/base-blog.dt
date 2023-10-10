@@ -14,7 +14,13 @@ block body
             block body-blog
 
 block scripts
-    script(src="/static/scripts/highlight.js")
+    script(src="/static/highlightjs/highlight.min.js")
+    script(src="/static/highlightjs/bash.min.js")
+    script(src="/static/highlightjs/javascript.min.js")
+    script(src="/static/highlightjs/nginx.min.js")
+    script(src="/static/highlightjs/shell.min.js")
+    script(src="/static/highlightjs/typescript.min.js")
+    script(src="/static/highlightjs/yaml.min.js")
 
     script.
         hljs.initHighlightingOnLoad();

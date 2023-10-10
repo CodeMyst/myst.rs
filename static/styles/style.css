@@ -44,6 +44,10 @@ a {
     }
 }
 
+hr {
+    border: 1px solid var(--color-bg2);
+}
+
 .monospace {
     font-family: var(--font-stack-monospace);
 }
@@ -323,9 +327,17 @@ footer .container p {
     border: none;
 }
 
+.markdown pre {
+    padding: 20px;
+    background-color: var(--color-bg1);
+    font-size: var(--font-size-code);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-bg2);
+}
+
 .markdown code {
-    background-color: var(--color-bg2);
-    padding: 2px 5px;
+    background-color: var(--color-bg1);
+    padding: 2px 5px !important;
 }
 
 .markdown blockquote {
@@ -358,12 +370,6 @@ footer .container p {
     padding: 0.25rem 1rem;
     line-height: inherit;
     border-bottom: 1px solid var(--color-bg2);
-}
-
-.markdown pre {
-    padding: 20px;
-    background-color: var(--color-bg2);
-    font-size: var(--font-size-code);
 }
 
 .markdown iframe {
