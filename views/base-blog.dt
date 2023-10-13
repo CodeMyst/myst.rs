@@ -3,12 +3,15 @@ extends base
 block body
     #blog
         .header
-            nav.container-small.monospace
-                - static if (is(typeof(post)))
-                    a(href="/") [codemyst
-                    a(href="/blog")  /blog]
-                - else
-                    a(href="/") [codemyst]
+            nav.container-small
+                .monospace
+                    - static if (is(typeof(post)))
+                        a(href="/") [codemyst
+                        a(href="/blog")  /blog]
+                    - else
+                        a(href="/") [codemyst]
+                .monospace
+                    a(href="/blog/feed.xml") feed
 
         .container-small
             block body-blog

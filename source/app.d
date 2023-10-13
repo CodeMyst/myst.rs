@@ -3,6 +3,9 @@ module myst;
 import vibe.d;
 import std.datetime;
 import dyaml;
+import ffeedd.feed;
+import ffeedd.item;
+import ffeedd.author;
 
 public struct Post
 {
@@ -45,6 +48,30 @@ void displayError(HTTPServerRequest req, HTTPServerResponse res, HTTPServerError
     res.render!("error.dt", error, errorDebug);
 }
 
+Feed getFeed()
+{
+    const posts = getPosts();
+
+    auto author = Author("CodeMyst <code@myst.rs>");
+
+    auto feed = new Feed("CodeMyst", "https://myst.rs/blog", "Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming. This is my personal blog.");
+    feed.published = DateTime(2023, 10, 13, 16, 00, 00);
+    feed.updated = Clock.currTime().toUTC().to!DateTime();
+    feed.authors ~= author;
+
+    foreach (post; posts)
+    {
+        auto feedItem = new FeedItem(post.title, "https://myst.rs/blog/" ~ post.link, post.summary);
+        feedItem.published = post.date.to!DateTime();
+        feedItem.updated = post.date.to!DateTime();
+        feedItem.authors ~= author;
+
+        feed.items ~= feedItem;
+    }
+
+    return feed;
+}
+
 /++
  + root web interface
  +/
@@ -65,6 +92,14 @@ class RootWeb
         const posts = getPosts();
 
         render!("blog-list.dt", posts);
+    }
+
+    @path("/blog/feed.xml")
+    string getRss(HTTPServerResponse res)
+    {
+        res.contentType = "application/xml";
+
+        return getFeed().createAtomFeed();
     }
 
     @path("/blog/:post")
@@ -123,7 +158,7 @@ Post[] getPosts()
 
         p.title = root["title"].get!string;
         p.summary = root["summary"].get!string;
-        p.date = cast(Date) root["date"].get!SysTime;
+        p.date = root["date"].get!SysTime.to!Date;
         p.link = root["link"].get!string;
         p.path = postFile;
 

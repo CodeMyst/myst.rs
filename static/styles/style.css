@@ -101,6 +101,9 @@ footer .container p {
 
 #blog .header .container-small {
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .post {
