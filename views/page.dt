@@ -1,0 +1,43 @@
+extends base
+
+block body
+    #blog
+        .header
+            nav.container-small
+                .monospace
+                    a(href="/") [codemyst]
+                .monospace
+                    a(href="/blog/feed.xml") feed
+
+        .container-small
+            h1= page.title
+
+            .markdown
+                - import commonmarkd;
+                |!= convertMarkdownToHTML(content, MarkdownFlag.tablesExtension | MarkdownFlag.enableStrikeThrough | MarkdownFlag.latexMathSpans)
+
+            .comments
+                script(src="https://giscus.app/client.js",
+                        data-repo="CodeMyst/myst.rs",
+                        data-repo-id="MDEwOlJlcG9zaXRvcnkzMTA0MDU0OTk=",
+                        data-category="Announcements",
+                        data-category-id="DIC_kwDOEoBpe84B_tVE",
+                        data-mapping="pathname",
+                        data-reactions-enabled="0",
+                        data-emit-metadata="0",
+                        data-theme="dark_dimmed",
+                        data-lang="en",
+                        crossorigin="anonymous",
+                        async)
+
+block scripts
+    script(src="/static/highlightjs/highlight.min.js")
+    script(src="/static/highlightjs/bash.min.js")
+    script(src="/static/highlightjs/javascript.min.js")
+    script(src="/static/highlightjs/nginx.min.js")
+    script(src="/static/highlightjs/shell.min.js")
+    script(src="/static/highlightjs/typescript.min.js")
+    script(src="/static/highlightjs/yaml.min.js")
+
+    script.
+        hljs.initHighlightingOnLoad();

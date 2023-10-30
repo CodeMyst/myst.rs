@@ -7,7 +7,7 @@ import ffeedd.feed;
 import ffeedd.item;
 import ffeedd.author;
 
-public struct Post
+public struct MdPage
 {
     string title;
     string summary;
@@ -37,7 +37,7 @@ void main()
     runApplication();
 }
 
-void displayError(HTTPServerRequest req, HTTPServerResponse res, HTTPServerErrorInfo error)
+void displayError(HTTPServerRequest _, HTTPServerResponse res, HTTPServerErrorInfo error)
 {
     import std.file : append;
     import std.datetime.systime : Clock;
@@ -122,31 +122,52 @@ class RootWeb
         render!("blog-post.dt", post, content);
     }
 
-    @path("/:project")
-    void getProject(string _project)
+    @path("/:mdPage")
+    void getMdPage(string _mdPage)
     {
-        import std.file : exists;
+        import std.algorithm : find;
+        import std.file : readText;
+        import std.string : indexOf;
+        import std.path : baseName, stripExtension;
 
-        const project = _project;
+        auto pages = getPages().find!((a, b) => a.path.baseName.stripExtension == b)(_mdPage);
 
-        if (!exists("projects/"~project~".md")) return;
+        if (pages.length == 0) return;
 
-        render!("project.dt", project);
+        auto page = pages[0];
+
+        auto fullContent = page.path.readText();
+
+        const content = fullContent[fullContent.indexOf("---", 4)+4..$];
+
+        render!("page.dt", page, content);
     }
 }
 
-Post[] getPosts()
+MdPage[] getPosts()
+{
+    import std.algorithm : sort;
+    import std.array : array;
+
+    return getMdPages("blog/").sort!((a, b) => a.date > b.date).array;
+}
+
+MdPage[] getPages()
+{
+    return getMdPages("pages/");
+}
+
+MdPage[] getMdPages(string path)
 {
     import std.file : dirEntries, SpanMode, readText;
     import std.string : indexOf;
-    import std.algorithm : sort;
     import std.datetime : Date;
 
-    Post[] posts;
+    MdPage[] pages;
 
-    foreach (postFile; dirEntries("blog/", SpanMode.shallow))
+    foreach (pageFile; dirEntries(path, SpanMode.shallow))
     {
-        string text = readText(postFile);
+        string text = readText(pageFile);
         auto startIdx = 4;
         auto endIdx = text.indexOf("---", startIdx)-1;
 
@@ -154,21 +175,17 @@ Post[] getPosts()
 
         Node root = Loader.fromString(yaml).load();
 
-        Post p;
+        MdPage p;
 
         p.title = root["title"].get!string;
         p.summary = root["summary"].get!string;
-        p.date = root["date"].get!SysTime.to!Date;
-        p.link = root["link"].get!string;
-        p.path = postFile;
+        if ("date" in root) p.date = root["date"].get!SysTime.to!Date;
+        if ("link" in root) p.link = root["link"].get!string;
+        p.path = pageFile;
 
-        posts ~= p;
+        pages ~= p;
     }
 
-    posts.sort!((a, b) => 
-        a.date > b.date
-    );
-
-    return posts;
+    return pages;
 }
 

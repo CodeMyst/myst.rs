@@ -4,6 +4,8 @@ html(lang="en")
         - string _title = "";
         - static if (is(typeof(post)))
             - _title = "CodeMyst - " ~ post.title;
+        - static if (is(typeof(page)))
+            - _title = "CodeMyst - " ~ page.title;
         - else static if (is(typeof(posts)))
             - _title = "CodeMyst - Blog";
         - else
@@ -12,6 +14,8 @@ html(lang="en")
         - string _description = "Hello! I'm CodeMyst, a software developer that likes to play around with everything. I mostly focus on web and game programming. This is my personal portfolio and blog.";
         - static if (is(typeof(post)))
             - _description = post.summary ~ ".\n\n" ~ _description;
+        - else static if (is(typeof(page)))
+            - _description = page.summary ~ ".\n\n" ~ _description;
 
         - static if (is(typeof(post)))
             meta(property="article:published_time", content=post.date.toISOExtString())
