@@ -4,7 +4,7 @@ html(lang="en")
         - string _title = "";
         - static if (is(typeof(post)))
             - _title = "CodeMyst - " ~ post.title;
-        - static if (is(typeof(page)))
+        - else static if (is(typeof(page)))
             - _title = "CodeMyst - " ~ page.title;
         - else static if (is(typeof(posts)))
             - _title = "CodeMyst - Blog";
