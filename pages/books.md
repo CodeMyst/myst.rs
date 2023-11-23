@@ -9,15 +9,9 @@ List of the books I'm reading, have read or going to read. There are many books 
 
 You can also view this list on [goodreads](https://www.goodreads.com/review/list/169654502-codemyst?order=d&ref=nav_mybooks&sort=date_read).
 
-My rating system:
-
-- L - Liked
-- RL - Really Liked
-- RRL - Really Really liked
-
 ## Currently Reading
 
-- We (Yevgeny Zamyatin)
+- Nothing yet...
 
 ## To Read
 
@@ -30,11 +24,12 @@ My rating system:
 
 ## 2023
 
-- The City & the City (China Miéville) - [RRL]
-- The Man in the High Castle (Philip K. Dick) - [L]
-- No Longer Human (Osamu Dazai) - [L]
-- Battle Royale (Koushun Takami) - [RRL]
+- We (Yevgeny Zamyatin) - [3/5]
+- The City & the City (China Miéville) - [5/5]
+- The Man in the High Castle (Philip K. Dick) - [4/5]
+- No Longer Human (Osamu Dazai) - [4/5]
+- Battle Royale (Koushun Takami) - [5/5]
 
 ## 2016
 
-- Fahrenheit 451 (Ray Bradbury) - [L]
+- Fahrenheit 451 (Ray Bradbury) - [4/5]
